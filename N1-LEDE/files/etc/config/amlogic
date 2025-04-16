@@ -1,6 +1,6 @@
 config amlogic 'config'
 	option enable '1'
-	option amlogic_firmware_repo 'https://github.com/Joseepb/N1-OP'
+	option amlogic_firmware_repo 'https://github.com/lein134/N1'
 	option amlogic_firmware_tag 'OpenWrt'
 	option amlogic_firmware_suffix '.img.gz'
 	option amlogic_kernel_path 'https://github.com/breakings/OpenWrt'
