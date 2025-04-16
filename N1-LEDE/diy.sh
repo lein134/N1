@@ -9,30 +9,35 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
-# Add packages
-# git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
+###########################################################################
 # 自定义添加
-git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
-git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
+# git clone --depth=1 https://github.com/vernesong/OpenClash package/OpenClash
 # git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 # git clone --depth=1 https://github.com/sundaqiang/openwrt-packages package/openwrt-packages
 # mv package/openwrt-packages/luci-app-wolplus package/luci-app-wolplus
 # rm -rf package/openwrt-packages
-git clone --depth=1 https://github.com/kuoruan/openwrt-frp package/openwrt-frp
-git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
-git clone --depth=1 https://github.com/gw826943555/openwrt_msd_lite package/openwrt_msd_lite
+# git clone --depth=1 https://github.com/kuoruan/openwrt-frp package/openwrt-frp
+# git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
+# git clone --depth=1 https://github.com/gw826943555/openwrt_msd_lite package/openwrt_msd_lite
 # git clone --depth=1 https://github.com/riverscn/openwrt-iptvhelper package/openwrt-iptvhelper
+###########################################################################
+# Add packages
+git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
+git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
+git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+
 git clone --depth=1 https://github.com/kenzok8/small-package package/small
 mv package/small/luci-app-openclash package/luci-app-openclash
 mv package/small/iptvhelper package/iptvhelper
 mv package/small/luci-app-iptvhelper package/luci-app-iptvhelper
-# mv package/small/luci-app-msd_lite package/luci-app-msd_lite
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
 mv package/small/cdnspeedtest package/cdnspeedtest
 mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedtest
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 mv package/small/luci-app-fileassistant package/luci-app-fileassistant
 mv package/small/luci-app-wolplus package/luci-app-wolplus
+# mv package/small/luci-app-msd_lite package/luci-app-msd_lite
 # mv package/small/netdata package/netdata
 # mv package/small/luci-app-netdata package/luci-app-netdata
 # mv package/small/qbittorrent package/qbittorrent
@@ -59,9 +64,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 #git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
-#添加自定义的软件包源
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages ddns-go
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-ddns-go
+
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
 rm -rf feeds/packages/net/v2ray-geodata
@@ -73,9 +76,10 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
 # 自定义
-rm -rf feeds/packages/net/frp
-rm -rf feeds/luci/applications/luci-app-frps
-rm -rf feeds/luci/applications/luci-app-frpc
+rm -rf feeds/packages/net/ddns-go
+# rm -rf feeds/packages/net/frp
+# rm -rf feeds/luci/applications/luci-app-frps
+# rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/packages/admin/netdata
