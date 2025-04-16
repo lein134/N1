@@ -102,8 +102,8 @@ sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
 sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/luci2/bin/config_generate
 
 # golang版本修复
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
