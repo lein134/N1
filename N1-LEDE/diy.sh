@@ -17,7 +17,7 @@ function git_sparse_clone() {
 # mv package/openwrt-packages/luci-app-wolplus package/luci-app-wolplus
 # rm -rf package/openwrt-packages
 # git clone --depth=1 https://github.com/kuoruan/openwrt-frp package/openwrt-frp
-# git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
+
 # git clone --depth=1 https://github.com/gw826943555/openwrt_msd_lite package/openwrt_msd_lite
 # git clone --depth=1 https://github.com/riverscn/openwrt-iptvhelper package/openwrt-iptvhelper
 ###########################################################################
@@ -26,6 +26,7 @@ git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
 
 git clone --depth=1 https://github.com/kenzok8/small-package package/small
 mv package/small/luci-app-openclash package/luci-app-openclash
@@ -78,8 +79,8 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 # 自定义
 rm -rf feeds/packages/net/ddns-go
 # rm -rf feeds/packages/net/frp
-# rm -rf feeds/luci/applications/luci-app-frps
-# rm -rf feeds/luci/applications/luci-app-frpc
+rm -rf feeds/luci/applications/luci-app-frps
+rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/packages/admin/netdata
