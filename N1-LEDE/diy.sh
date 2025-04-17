@@ -26,6 +26,8 @@ git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+git clone --depth=1 https://github.com/user1121114685/frp package/frp
+git clone --depth=1 https://github.com/user1121114685/luci-app-frps package/luci-app-frps
 
 git clone --depth=1 https://github.com/kenzok8/small-package package/small
 mv package/small/luci-app-openclash package/luci-app-openclash
@@ -77,8 +79,8 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/applications/luci-app-design-config
 # 自定义
 rm -rf feeds/packages/net/ddns-go
-# rm -rf feeds/packages/net/frp
-# rm -rf feeds/luci/applications/luci-app-frps
+rm -rf feeds/packages/net/frp
+rm -rf feeds/luci/applications/luci-app-frps
 # rm -rf feeds/luci/applications/luci-app-frpc
 # rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/luci/applications/luci-app-wrtbwmon
@@ -89,13 +91,6 @@ rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/luci/applications/luci-app-qbittorrent
 rm -rf feeds/luci/applications/luci-app-serverchan
 
-# 1 启用 frps
-rm -rf feeds/packages/net/frp
-git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
-rm -rf feeds/luci/applications/luci-app-frps
-git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
-sed -i 's/# CONFIG_PACKAGE_frps is not set/CONFIG_PACKAGE_frps=y/' feeds/smpackage/.github/diy/${{matrix.target}}.config
-sed -i 's/# CONFIG_PACKAGE_luci-app-frps is not set/CONFIG_PACKAGE_luci-app-frps=y/' feeds/smpackage/.github/diy/${{matrix.target}}.config
 
 # Default IP
 #sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/files/bin/config_generate
