@@ -93,6 +93,7 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 # 1 启用 frps
 rm -rf feeds/packages/net/frp
 git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
+# git clone https://github.com/kuoruan/openwrt-frp -b v0.53.2-1 feeds/packages/net/frp
 # git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
 # git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
