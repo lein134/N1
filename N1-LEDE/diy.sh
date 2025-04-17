@@ -82,7 +82,7 @@ rm -rf feeds/packages/net/ddns-go
 rm -rf feeds/packages/net/frp
 rm -rf feeds/luci/applications/luci-app-frps
 # rm -rf feeds/luci/applications/luci-app-frpc
-# rm -rf feeds/packages/net/msd_lite
+rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/packages/admin/netdata
 # rm -rf feeds/luci/applications/luci-app-netdata
