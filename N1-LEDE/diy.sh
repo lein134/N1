@@ -22,8 +22,8 @@ function git_sparse_clone() {
 # git clone --depth=1 https://github.com/riverscn/openwrt-iptvhelper package/openwrt-iptvhelper
 ###########################################################################
 # Add packages
-git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
-git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
+# git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
+# git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
 git clone --depth=1 https://github.com/user1121114685/frp package/frp
@@ -83,7 +83,7 @@ rm -rf feeds/packages/net/frp
 rm -rf feeds/luci/applications/luci-app-frps
 # rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/packages/net/msd_lite
-rm -rf feeds/luci/applications/luci-app-wrtbwmon
+# rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # rm -rf feeds/packages/admin/netdata
 # rm -rf feeds/luci/applications/luci-app-netdata
 # rm -rf feeds/packages/net/qBittorrent
