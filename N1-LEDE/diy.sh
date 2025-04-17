@@ -92,9 +92,10 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 
 # 1 启用 frps
 rm -rf feeds/packages/net/frp
-git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
-rm -rf feeds/luci/applications/luci-app-frps
-git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
+git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
+# git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
+# rm -rf feeds/luci/applications/luci-app-frps
+# git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
 
 # Default IP
 #sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/files/bin/config_generate
