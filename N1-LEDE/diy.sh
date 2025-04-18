@@ -37,7 +37,8 @@ mv package/small/cdnspeedtest package/cdnspeedtest
 mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedtest
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 mv package/small/luci-app-fileassistant package/luci-app-fileassistant
-mv package/small/luci-app-wolplus package/luci-app-wolplus
+rm -rf feeds/luci/applications/luci-app-wol
+mv package/small/luci-app-wolplus feeds/luci/applications/luci-app-wolplus
 # mv package/small/luci-app-msd_lite package/luci-app-msd_lite
 # mv package/small/netdata package/netdata
 # mv package/small/luci-app-netdata package/luci-app-netdata
@@ -77,6 +78,7 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
 # 自定义
+
 rm -rf feeds/packages/net/ddns-go
 # rm -rf feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
